@@ -1,0 +1,56 @@
+.menuTop {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 250px; /* Fixed width for the sidebar */
+  /* height: 100%; */
+  /* background-color: #333; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(241, 238, 238, 0.1);
+  z-index: 1000; /* Ensure the sidebar is on top */
+  background-color: #EAEBED;
+  overflow: scroll;
+  height: calc(100% - 60px); /* Adjust the height to account for the header height */
+
+}
+
+
+.menuActive1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  color: black;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.menuActive1:hover {
+  background-color: #4275f5;
+  /* background-color: #444; */
+}
+
+ 
+
+.dashboardIcon,
+.rejectionIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.menuActive1 img {
+  display: block;
+}
+
+.menuActive1 span {
+  display: flex;
+  align-items: center;
+}
+
+span > svg {
+  margin-right: 8px;
+}
