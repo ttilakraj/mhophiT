@@ -1,28 +1,25 @@
 import React from "react";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
-import { useNavigate } from 'react-router-dom';
- 
+import { useNavigate } from "react-router-dom";
+
 import "../Inventory/Inventory.css";
 import Header from "../../Pages/Header";
 import Sidebar from "../../Pages/Sidebar";
 
-const data = [
-  { category: "Manage Users", items: 4},
-  { category: "Manage Departments", items: 6},
-  { category: "Manage Activities", items: 4  },
-  { category: "Manage Workstations", items: 0 },
-  { category: "Manage Products", items: 0  },
-  { category: "Manage Production Line", items: 0 },
-  { category: "Manage Teams  ", items: 9  },
-];
-
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import HomeIcon from '@mui/icons-material/Home';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 const Setup = () => {
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    navigate('/material-inventory');
+  const handleDepartmentPage = () => {
+    navigate("/departments");
   };
   return (
     <div>
@@ -34,35 +31,160 @@ const Setup = () => {
             <h2 className="text-center mb-4">Process Configuration Centre</h2>
           </div>
           <Row>
-            {data.map((item, index) => (
-              <Col xs={12} sm={6} md={4} className="mb-4" key={index}>
-                <Card className="h-100">
-                  <Card.Body className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <Card.Title>{item.category}</Card.Title>
-                      <Card.Text>No of Items: {item.items}</Card.Text>
-                      {item.belowSafety !== undefined && (
-                        <Card.Text>
-                          # Below Safety Level: {item.belowSafety}
-                        </Card.Text>
-                      )}
-                      {item.distinctProducts !== undefined && (
-                        <Card.Text>
-                          # Distinct Products: {item.distinctProducts}
-                        </Card.Text>
-                      )}
-                    </div>
-                    <Button
-                      variant="primary"
-                      className="rounded-circle"
-                      onClick={handleButtonClick}
-                    >
-                      <ArrowRight color="white" />
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
+            <Col
+              xs={12}
+              sm={6}
+              md={4}
+              className="mb-4"
+              
+            >
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Users</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Users: 16
+                    </Card.Text>
+                  </div>
+                  <div><AssignmentIndIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+                onClick={handleDepartmentPage}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Departments</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Departments: 16
+                    </Card.Text>
+                  </div>
+                  <div><HomeIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Activities</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Activities: 16
+                    </Card.Text>
+                  </div>
+                  <div><PendingActionsIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Workstations</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Workstations: 16
+                    </Card.Text>
+                  </div>
+                  <div><HomeWorkIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Products</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Products: 16
+                    </Card.Text>
+                  </div>
+                  <div><InventoryIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage Production Line</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Prodcution Line: 16
+                    </Card.Text>
+                  </div>
+                  <div><PrecisionManufacturingIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4} className="mb-4">
+              <Card
+                style={{
+                  height: "10rem",
+                  width: "18rem",
+                  backgroundColor: "#7469b6",
+                  marginLeft: "45px",
+                  marginRight: "45px"
+                }}
+              >
+                <Card.Body className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Card.Title>Manage teams</Card.Title>
+                    <Card.Text style={{ color: "white" }}>
+                      No of Teams: 16
+                    </Card.Text>
+                  </div>
+                  <div><GroupsIcon style={{fontSize:"50px"}}/></div>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </div>

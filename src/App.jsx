@@ -11,10 +11,12 @@ import Productionplan from './Components/ProductionPlan/ProductionPlan';
 import MaterialStatus from './Components/Material/MaterialStatus';
 import MaterialInventory from './Components/Material/MaterialInventory';
 import Inventory from './Components/Inventory/Inventory';
+import TeamsManagement from './Components/ProcessConfiguration/TeamsManagement/TeamsManagement';
+import WorkstationManagement from './Components/ProcessConfiguration/WorksationManagement/WorkstationManagement';
 
 
  function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
@@ -27,6 +29,8 @@ import Inventory from './Components/Inventory/Inventory';
     <Route path='/material-status' element={<MaterialStatus />} />
     <Route path='/material-inventory' element={<MaterialInventory />} />
     <Route path='/inventory' element={<Inventory />} />
+    <Route path='/team-management' element={<TeamsManagement />} />
+    <Route path='/workstation-management' element={<WorkstationManagement />} />
      </Routes>
   </BrowserRouter>
   );
