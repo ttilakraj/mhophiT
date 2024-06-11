@@ -13,6 +13,10 @@ import MaterialInventory from './Components/Material/MaterialInventory';
 import Inventory from './Components/Inventory/Inventory';
 import TeamsManagement from './Components/ProcessConfiguration/TeamsManagement/TeamsManagement';
 import WorkstationManagement from './Components/ProcessConfiguration/WorksationManagement/WorkstationManagement';
+import DepartmentManagement from './Components/ProcessConfiguration/DepartmentManagement/DepartmentManagement';
+import ActivityManagement from './Components/ProcessConfiguration/ActivityManagement/ActivityManagement';
+import ProductionLineManagement from './Components/ProcessConfiguration/ProductionLineManagement/ProductionLineManagement';
+
 
 
  function App() {
@@ -31,6 +35,9 @@ import WorkstationManagement from './Components/ProcessConfiguration/WorksationM
     <Route path='/inventory' element={<Inventory />} />
     <Route path='/team-management' element={<TeamsManagement />} />
     <Route path='/workstation-management' element={<WorkstationManagement />} />
+    <Route path='/department-management' element={<DepartmentManagement />} />
+    <Route path='/activity-management' element={<ActivityManagement />} />
+    <Route path='/productionline-management' element={<ProductionLineManagement />} />
      </Routes>
   </BrowserRouter>
   );

@@ -1,32 +1,32 @@
 import React from "react";
-import "./WorkstationManagement.css";
+import "./ActivityManagement.css";
 import { Card, Row, Col, Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Header from "../../../Pages/Header";
 import Sidebar from "../../../Pages/Sidebar";
 
-const WorkstationManagement = () => {
+const ActivityManagement = () => {
+
   const navigate = useNavigate();
 
   const goTosetup = () => {
     navigate(-1);
   };
-
   return (
     <div>
       <Header />
       <Sidebar />
-      <div className="workstation-management-container card">
+      <div className="department-management-container card">
         <Container className="mt-4">
           <div className="card-header d-flex justify-content-between align-items-center">
-            <button
+          <button
               type="button"
               className="btn btn-outline-secondary me-2"
               onClick={goTosetup}
             >
               <i className="bi bi-arrow-left"></i>
             </button>
-            <h2 className="text-center">Workstation Detail Page</h2>
+            <h2 className="text-center">Activities Detail Page</h2>
             <div className="d-flex justify-content-between">
               <button
                 type="button"
@@ -63,7 +63,7 @@ const WorkstationManagement = () => {
                     <div class="modal-body">
                       <div className="card p-3">
                         <Form>
-                          <h3 className="text-center">Add New Workstation</h3>
+                          <h3 className="text-center">Add New Activity</h3>
                           <Col>
                             <Form.Group controlId="formWorkstation">
                               <Form.Label>Name</Form.Label>
@@ -78,72 +78,19 @@ const WorkstationManagement = () => {
                           </Col>
                           <Col>
                             <Form.Group controlId="formWorkstation">
-                              <Form.Label>Activity</Form.Label>
+                              <Form.Label>Department</Form.Label>
                               <Form.Select>
-                                <option value="option35">Select option</option>
-                                <option value="option1">BLANKING</option>
-                                <option value="option2">PIERCING</option>
-                                <option value="option3">DRAWING</option>
-                                <option value="option4">FIN ROLLING</option>
+                                <option value="option1">Select option</option>
+                                
+                                <option value="option2">Administrator</option>
+                                <option value="option3">Press</option>
+                                <option value="option4">Sheet Mill</option>
                                 <option value="option5">
-                                  MANUAL CORE ASSY
+                                  Fabrication
                                 </option>
-                                <option value="option6">WELDING</option>
-                                <option value="option7">LEAK TESTING</option>
-                                <option value="option8">
-                                  WELDING (01 IC 15 0000)
-                                </option>
-                                <option value="option9">
-                                  WELDING (01 IC 32 0000)
-                                </option>
-                                <option value="option10">
-                                  SEMI AUTO CORE ASSY
-                                </option>
-                                <option value="option11">FORMING</option>
-                                <option value="option12">FORMING(ES)</option>
-                                <option value="option13">
-                                  WELDING(01 IC 69 0000)
-                                </option>
-                                <option value="option14">
-                                  WELDING(01 IC 77 0000)
-                                </option>
-                                <option value="option15">BRAZING</option>
-                                <option value="option16">
-                                  WELDING(01 IC 78 0000)
-                                </option>
-                                <option value="option17">
-                                  WELDING(01 IC 84 0000)
-                                </option>
-                                <option value="option18">ASSY WELDING</option>
-                                <option value="option19">AUTO CORE ASSY</option>
-                                <option value="option20">FORMING I</option>
-                                <option value="option21">FORMING II</option>
-                                <option value="option23">FORMING III</option>
-                                <option value="option24">NOTCHING(ES)</option>
-                                <option value="option25">CLINCHING</option>
-                                <option value="option26">
-                                  WELDING (06 IC 7 0000)
-                                </option>
-                                <option value="option27">
-                                  WELDING (06 IC 79)
-                                </option>
-                                <option value="option28">
-                                  PIERCING AND DRAWING
-                                </option>
-                                <option value="option29">DRAWING II</option>
-                                <option value="option30">CORE ASSEMBLY</option>
-                                <option value="option31">
-                                  LEAK TESTING (R)
-                                </option>
-                                <option value="option32">
-                                  LIB NOTCHING (R)
-                                </option>
-                                <option value="option33">
-                                  END LIB NOTCHING
-                                </option>
-                                <option value="option34">
-                                  WELDING (07 IC 04 0000)
-                                </option>
+                                <option value="option6">Furnace</option>
+                                <option value="option7">Assembly</option>
+                                <option value="option7">Testing</option>
                               </Form.Select>
                             </Form.Group>
                           </Col>
@@ -152,7 +99,7 @@ const WorkstationManagement = () => {
                             <Button className="me-2" variant="outline-success">
                               Reset
                             </Button>{" "}
-                            <Button variant="success">Add Workstation</Button>{" "}
+                            <Button variant="success">Add Activity</Button>{" "}
                           </div>
                         </Form>
                       </div>
@@ -191,8 +138,7 @@ const WorkstationManagement = () => {
                       <tr class="table-header">
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Activity Name</th>
-                        <th>Status</th>
+                        <th>Department Name</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -237,23 +183,10 @@ const WorkstationManagement = () => {
             </div>
           </Col>
           <br />
-          <hr />
-          <Col>
-            <div className="card">
-              <div className="card-body">
-                <div className="d-flex justify-content-between align-items-center mb-3">
-                  <h2 className="text-center">
-                    Workstation Capacity by Products
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </Col>
-          <br />
         </Container>
       </div>
     </div>
   );
 };
 
-export default WorkstationManagement;
+export default ActivityManagement;

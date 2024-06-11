@@ -18,9 +18,34 @@ import GroupsIcon from '@mui/icons-material/Groups';
 const Setup = () => {
   const navigate = useNavigate();
 
-  const handleDepartmentPage = () => {
+  const handleUser = () => {
     navigate("/departments");
   };
+
+  const handleDepartment = () => {
+    navigate("/department-management");
+  };
+
+  const handleActivity = () => {
+    navigate("/activity-management");
+  };
+
+  const handleWorkstation = () => {
+    navigate("/workstation-management");
+  };
+
+  const handleProduct = () => {
+    navigate("/departments");
+  };
+
+  const handleProduction = () => {
+    navigate("/productionline-management");
+  };
+
+  const handleTeam = () => {
+    navigate("/team-management");
+  };
+
   return (
     <div>
       <Header />
@@ -44,8 +69,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleUser}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -65,9 +92,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
-                onClick={handleDepartmentPage}
+                onClick={handleDepartment}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -87,8 +115,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleActivity}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -108,8 +138,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleWorkstation}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -129,8 +161,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleProduct}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -150,8 +184,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleProduction}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
@@ -171,8 +207,10 @@ const Setup = () => {
                   width: "18rem",
                   backgroundColor: "#7469b6",
                   marginLeft: "45px",
-                  marginRight: "45px"
+                  marginRight: "45px",
+                  cursor: "pointer"
                 }}
+                onClick={handleTeam}
               >
                 <Card.Body className="d-flex justify-content-between align-items-center">
                   <div>
